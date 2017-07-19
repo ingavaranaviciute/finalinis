@@ -1,1 +1,164 @@
+html, body, .container {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/*HEADER*/
+//
+
+
+.topbar {
+  overflow: hidden;
+  padding: 10px 105px 10px 105px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e4e4e4;
+  .topDetails.float-left {
+    .topDetailsInfo {
+      padding: 12px 0 12px 0;
+      margin-right: 40px;
+      font-size: 11px;
+      color: #777777;
+      cursor: pointer;
+
+    }
+  }
+  .topSocLink{
+    color: #808c8c;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 4px;
+
+    &:hover{
+      color: white;
+      background-color: #17aeac;
+    }
+    i {
+      font-size: 15px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
+
+.topLink:hover{
+  text-decoration: none;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+#navbar {
+  //background-color: lightpink;
+  clear: both;
+  overflow: hidden;
+  padding: 10px 105px 10px 105px;
+  height: 80px;
+  .logo {
+    float: left;
+    .darkLogo {
+      display: inline-block;
+      position: relative;
+      top: 11px;
+      max-height: 100%;
+      cursor: pointer;
+
+    }
+  }
+  ul {
+    float: left;
+    padding-left: 25px;
+    padding-right: 20px;
+    li {
+      text-decoration: none;
+      display: inline-block;
+
+      .navbarLink {
+        span {
+          color: #324545;
+          padding: 28px 18px;
+          display: block;
+          font-weight: 600;
+
+          font-size: 12px;
+          &:hover, &.active {
+            color: #1ccdca;
+            transition: all 0.5s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+  .navbarLink:hover {
+    text-decoration: none;
+
+  }
+  .searchIkon {
+    color: #1ccdca;
+    font-size: 15px;
+    left: 25px;
+    position: absolute;
+    top: 28px;
+    cursor: pointer;
+  }
+
+  #search {
+    border-radius: 20px;
+    padding: 15px 30px;
+  }
+
+  $placeholderColor: #757575;
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $placeholderColor;
+  }
+
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $placeholderColor;
+  }
+
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $placeholderColor;
+  }
+
+  ::-moz-placeholder { /* Firefox 18- */
+    color: $placeholderColor;
+  }
+
+  #cartSpan {
+    padding: 11px;
+    border-radius: 100px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    float: right;
+    position: relative;
+    bottom: 68px;
+    right: 15px;
+  }
+  #cart {
+    color: #818b8d;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+.searchDiv{
+  margin-left: 30px;
+}
