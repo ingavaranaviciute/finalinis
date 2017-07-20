@@ -12,24 +12,100 @@ html, body, .container {
 body {
   height: 100%;
   margin: 0;
+  //overflow-y: scroll;
 }
 
 /*HEADER*/
 //
 
 .topbar {
-  overflow: hidden;
+  overflow: visible;
   padding: 10px 105px 10px 105px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #e4e4e4;
-  .topDetails.float-left {
+
+  // Tam kad clearinti .topbar viduje esancius floatus
+  // butinai turi buti content: "" ir display: block
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .topDetails {
+    margin-top: 4px;
+
     .topDetailsInfo {
-      padding: 12px 0 12px 0;
+      //padding: 12px 0 12px 0;
       margin-right: 40px;
       font-size: 11px;
       color: #777777;
+      display: inline-block;
+      position: relative;
+
       .cursor {
         cursor: pointer;
+      }
+
+      &:hover {
+        .menu-wrapper {
+          display: block;
+          opacity: 1;
+          z-index: 10;
+          pointer-events: auto;
+        }
+      }
+
+      .menu-wrapper {
+        //display: none;
+        display: block;
+        overflow: hidden;
+        // sitas elementas tampa nepaspaudziamas
+        // ir visi clickai eina kiaurai
+        // rukas :)
+        pointer-events: none;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+        color: white;
+        //background-color: red;
+        position: absolute;
+        top: 100%;
+        left: 3px;
+        //height: 100px;
+        // padaro, kad veliau einantys elementai
+        // neuzliptu ant meniu
+        z-index: 1;
+
+        .menu {
+          display: block;
+          background-color: #19b8b5;
+          padding: 10px;
+          margin-top: 10px;
+          width: 150px;
+          height: 30px;
+          font-style: italic;
+          font-size: 11px;
+
+          i{
+            font-size: 11px;
+            color: white;
+            position: absolute;
+            left: 120px;
+          }
+        }
+        .menuRtl {
+          display: block;
+          background-color: #1ccdca;
+          padding: 10px;
+          width: 150px;
+          height: 30px;
+          margin-top: 0;
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+          cursor: pointer;
+          font-style: italic;
+          font-size: 11px;
+        }
       }
     }
   }
@@ -52,16 +128,23 @@ body {
   }
 }
 
-.topLink:hover {
-  text-decoration: none;
-}
+.topLink {
+  $size: 15px;
+  color: #808c8c;
+  width: $size;
+  height: $size;
+  line-height: $size;
+  padding: 8px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  box-sizing: content-box;
 
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #17aeac;
+  }
 }
 
 #navbar {
@@ -76,6 +159,7 @@ body {
       display: inline-block;
       position: relative;
       top: 11px;
+      left: 1.5px;
       max-height: 100%;
       cursor: pointer;
 
@@ -128,20 +212,22 @@ body {
 
 $placeholderColor: #757575;
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $placeholderColor;
-}
+.form-control {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $placeholderColor;
+  }
 
-::-moz-placeholder { /* Firefox 19+ */
-  color: $placeholderColor;
-}
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $placeholderColor;
+  }
 
-:-ms-input-placeholder { /* IE 10+ */
-  color: $placeholderColor;
-}
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $placeholderColor;
+  }
 
-::-moz-placeholder { /* Firefox 18- */
-  color: $placeholderColor;
+  &::-moz-placeholder { /* Firefox 18- */
+    color: $placeholderColor;
+  }
 }
 
 #cartSpan {
@@ -190,46 +276,155 @@ $placeholderColor: #757575;
       text-align: center;
     }
   }
-  .arrov {
-    width: 45px;
-    height: 45px;
+  .arrowWrapper {
+    $wrapperSize: 45px;
+    width: $wrapperSize;
+    height: $wrapperSize;
     border-radius: 45px;
     display: inline-block;
     background-color: #fff;
     position: absolute;
     top: 160px;
-  }
-  .arrov.left {
-    left: 10px;
-  }
-  .arrov.right {
-    right: 10px;
+    text-align: center;
+    line-height: $wrapperSize;
+    cursor: pointer;
+
+    &.left {
+      left: 10px;
+      padding: 0 4px 0 0.5px
+    }
+    &.right {
+      right: 10px;
+      padding: 0 4px 0 6.5px;
+    }
   }
 
-  .innerDivFirst {
-    width: 15%;
-    height: 45px;
-    background-color: red;
-    position: absolute;
-    top: 130px;
-    left: 115px;
-  }
-  .innerDivSecond{
-    width: 25%;
-    height: 60px;
-    background-color: #fff;
-    position: absolute;
-    top: 170px;
-    left: 115px;
-  }
-  .innerDivThird{
-    width: 40%;
-    height: 50px;
-    background-color: black;
-    opacity: 0.8;
-    position: absolute;
-    bottom: 130px;
-    left: 115px;
+  .arrow {
+    $color: red;
+    $width: 5px;
+    height: $width;
+    width: $width;
+    background-color: $color;
+    display: inline-block;
+    position: relative;
+    bottom: 1.5px;
+
+    &.left {
+      left: $width / -2;
+      &:before {
+        right: auto;
+        left: 100%;
+      }
+      &:after {
+        right: auto;
+        left: 100%;
+      }
+    }
+
+    &.right {
+      left: $width / 2;
+      &:before {
+        left: auto;
+        right: 100%;
+      }
+      &:after {
+        left: auto;
+        right: 100%;
+      }
+    }
+
+    &:before {
+      content: "";
+
+      height: $width;
+      width: $width;
+      background-color: $color;
+      display: block;
+      position: absolute;
+      top: 100%;
+    }
+
+    &:after {
+      content: "";
+      height: $width;
+      width: $width;
+      background-color: $color;
+      display: block;
+      position: absolute;
+      bottom: 100%;
+    }
   }
 }
+
+.slideLink {
+  padding: 13px 54px 13px 20px;
+  height: 45px;
+  background-color: #e74c3c;
+  position: absolute;
+  top: 130px;
+  left: 115px;
+  color: #fff;
+  font-size: 15px;
+  font-style: italic;
+
+  span {
+    width: 35px;
+    height: 45px;
+    background-color: #cf2c1d;
+    position: absolute;
+    top: 0;
+    left: 233px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darkred;
+      transition: all 0.5s ease;
+    }
+
+    i {
+      font-size: 20px;
+      color: white;
+    }
+  }
+
+}
+
+.slideHeading {
+  padding: 15px 20px;
+  height: 60px;
+  background-color: #fff;
+  position: absolute;
+  top: 175px;
+  left: 115px;
+  color: #e74c3c;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.slideText {
+  padding: 11px 20px;
+  height: 50px;
+  background-color: black;
+  opacity: 0.8;
+  position: absolute;
+  top: 235px;
+  left: 115px;
+  color: #fff;
+  font-family: "Kalam", cursive;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+
+  //  display: flex;
+  ////pagal default asis eina vertikaliai
+  //  align-items: center;
+  //  //pagal default asis eina horizontaliai
+  //  justify-content: center;
+
+}
+
 

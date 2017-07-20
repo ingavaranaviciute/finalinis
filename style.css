@@ -13,17 +13,66 @@ body {
 
 /*HEADER*/
 .topbar {
-  overflow: hidden;
+  overflow: visible;
   padding: 10px 105px 10px 105px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #e4e4e4; }
-  .topbar .topDetails.float-left .topDetailsInfo {
-    padding: 12px 0 12px 0;
-    margin-right: 40px;
-    font-size: 11px;
-    color: #777777; }
-    .topbar .topDetails.float-left .topDetailsInfo .cursor {
-      cursor: pointer; }
+  .topbar:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .topbar .topDetails {
+    margin-top: 4px; }
+    .topbar .topDetails .topDetailsInfo {
+      margin-right: 40px;
+      font-size: 11px;
+      color: #777777;
+      display: inline-block;
+      position: relative; }
+      .topbar .topDetails .topDetailsInfo .cursor {
+        cursor: pointer; }
+      .topbar .topDetails .topDetailsInfo:hover .menu-wrapper {
+        display: block;
+        opacity: 1;
+        z-index: 10;
+        pointer-events: auto; }
+      .topbar .topDetails .topDetailsInfo .menu-wrapper {
+        display: block;
+        overflow: hidden;
+        pointer-events: none;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+        color: white;
+        position: absolute;
+        top: 100%;
+        left: 3px;
+        z-index: 1; }
+        .topbar .topDetails .topDetailsInfo .menu-wrapper .menu {
+          display: block;
+          background-color: #19b8b5;
+          padding: 10px;
+          margin-top: 10px;
+          width: 150px;
+          height: 30px;
+          font-style: italic;
+          font-size: 11px; }
+          .topbar .topDetails .topDetailsInfo .menu-wrapper .menu i {
+            font-size: 11px;
+            color: white;
+            position: absolute;
+            left: 120px; }
+        .topbar .topDetails .topDetailsInfo .menu-wrapper .menuRtl {
+          display: block;
+          background-color: #1ccdca;
+          padding: 10px;
+          width: 150px;
+          height: 30px;
+          margin-top: 0;
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+          cursor: pointer;
+          font-style: italic;
+          font-size: 11px; }
   .topbar .topSocLink {
     color: #808c8c;
     width: 32px;
@@ -38,14 +87,20 @@ body {
       text-align: center;
       vertical-align: middle; }
 
-.topLink:hover {
-  text-decoration: none; }
-
-.float-left {
-  float: left; }
-
-.float-right {
-  float: right; }
+.topLink {
+  color: #808c8c;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  padding: 8px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  box-sizing: content-box; }
+  .topLink:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #17aeac; }
 
 #navbar {
   clear: both;
@@ -58,6 +113,7 @@ body {
       display: inline-block;
       position: relative;
       top: 11px;
+      left: 1.5px;
       max-height: 100%;
       cursor: pointer; }
   #navbar ul {
@@ -92,19 +148,16 @@ body {
   border-radius: 20px;
   padding: 15px 30px; }
 
-::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #757575; }
-
-::-moz-placeholder {
+.form-control::-moz-placeholder {
   /* Firefox 19+ */
   color: #757575; }
-
-:-ms-input-placeholder {
+.form-control:-ms-input-placeholder {
   /* IE 10+ */
   color: #757575; }
-
-::-moz-placeholder {
+.form-control::-moz-placeholder {
   /* Firefox 18- */
   color: #757575; }
 
@@ -147,39 +200,114 @@ body {
       font-size: 25px;
       vertical-align: middle;
       text-align: center; }
-  #slide .arrov {
+  #slide .arrowWrapper {
     width: 45px;
     height: 45px;
     border-radius: 45px;
     display: inline-block;
     background-color: #fff;
     position: absolute;
-    top: 160px; }
-  #slide .arrov.left {
-    left: 10px; }
-  #slide .arrov.right {
-    right: 10px; }
-  #slide .innerDivFirst {
-    width: 15%;
-    height: 45px;
+    top: 160px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer; }
+    #slide .arrowWrapper.left {
+      left: 10px;
+      padding: 0 4px 0 0.5px; }
+    #slide .arrowWrapper.right {
+      right: 10px;
+      padding: 0 4px 0 6.5px; }
+  #slide .arrow {
+    height: 5px;
+    width: 5px;
     background-color: red;
+    display: inline-block;
+    position: relative;
+    bottom: 1.5px; }
+    #slide .arrow.left {
+      left: -2.5px; }
+      #slide .arrow.left:before {
+        right: auto;
+        left: 100%; }
+      #slide .arrow.left:after {
+        right: auto;
+        left: 100%; }
+    #slide .arrow.right {
+      left: 2.5px; }
+      #slide .arrow.right:before {
+        left: auto;
+        right: 100%; }
+      #slide .arrow.right:after {
+        left: auto;
+        right: 100%; }
+    #slide .arrow:before {
+      content: "";
+      height: 5px;
+      width: 5px;
+      background-color: red;
+      display: block;
+      position: absolute;
+      top: 100%; }
+    #slide .arrow:after {
+      content: "";
+      height: 5px;
+      width: 5px;
+      background-color: red;
+      display: block;
+      position: absolute;
+      bottom: 100%; }
+
+.slideLink {
+  padding: 13px 54px 13px 20px;
+  height: 45px;
+  background-color: #e74c3c;
+  position: absolute;
+  top: 130px;
+  left: 115px;
+  color: #fff;
+  font-size: 15px;
+  font-style: italic; }
+  .slideLink span {
+    width: 35px;
+    height: 45px;
+    background-color: #cf2c1d;
     position: absolute;
-    top: 130px;
-    left: 115px; }
-  #slide .innerDivSecond {
-    width: 25%;
-    height: 60px;
-    background-color: #fff;
-    position: absolute;
-    top: 170px;
-    left: 115px; }
-  #slide .innerDivThird {
-    width: 40%;
-    height: 50px;
-    background-color: black;
-    opacity: 0.8;
-    position: absolute;
-    bottom: 130px;
-    left: 115px; }
+    top: 0;
+    left: 233px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
+    .slideLink span:hover {
+      background-color: darkred;
+      transition: all 0.5s ease; }
+    .slideLink span i {
+      font-size: 20px;
+      color: white; }
+
+.slideHeading {
+  padding: 15px 20px;
+  height: 60px;
+  background-color: #fff;
+  position: absolute;
+  top: 175px;
+  left: 115px;
+  color: #e74c3c;
+  font-size: 20px;
+  font-weight: bold; }
+
+.slideText {
+  padding: 11px 20px;
+  height: 50px;
+  background-color: black;
+  opacity: 0.8;
+  position: absolute;
+  top: 235px;
+  left: 115px;
+  color: #fff;
+  font-family: "Kalam", cursive;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
