@@ -39,7 +39,7 @@ body {
       //padding: 12px 0 12px 0;
       margin-right: 40px;
       font-size: 11px;
-      color: #777777;
+      color:#777777;
       display: inline-block;
       position: relative;
 
@@ -86,7 +86,7 @@ body {
           font-style: italic;
           font-size: 11px;
 
-          i{
+          i {
             font-size: 11px;
             color: white;
             position: absolute;
@@ -424,7 +424,39 @@ $placeholderColor: #757575;
   //  align-items: center;
   //  //pagal default asis eina horizontaliai
   //  justify-content: center;
-
 }
 
+.slideShop {
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  top: 330px;
+  left: 115px;
+  border-radius: 3px;
+  padding: 15px 15px 15px 65px;
+  color: #777777;
+    //span{
+    //
+    //}
+
+  i {
+    font-size: 20px;
+    color: #1ccdca;
+    padding: 15px;
+    background-color: white;
+    border-right: 1px solid #ccc;
+    position: absolute;
+    bottom: 0;
+    right: 125px;
+    text-align: center;
+
+  }
+}
+
+#description{
+  padding: 50px 15px;
+  max-width: 1170px;
+  background-color: #1B2228;
+  overflow: hidden;
+}
 
