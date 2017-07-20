@@ -181,81 +181,83 @@ body {
   margin-left: 30px; }
 
 /*slide*/
-#slide {
-  background-image: url("img/test_images/slide3.jpg");
-  background-size: cover;
-  width: 100%;
-  min-height: 90%;
-  position: fixed; }
-  #slide .cog {
-    width: 40px;
-    height: 45px;
-    line-height: 33px;
-    display: inline-block;
-    background-color: #fff;
-    padding: 8px;
-    position: absolute;
-    top: 45px; }
-    #slide .cog i {
-      font-size: 25px;
-      vertical-align: middle;
-      text-align: center; }
-  #slide .arrowWrapper {
-    width: 45px;
-    height: 45px;
-    border-radius: 45px;
-    display: inline-block;
-    background-color: #fff;
-    position: absolute;
-    top: 160px;
-    text-align: center;
-    line-height: 45px;
-    cursor: pointer; }
-    #slide .arrowWrapper.left {
-      left: 10px;
-      padding: 0 4px 0 0.5px; }
-    #slide .arrowWrapper.right {
-      right: 10px;
-      padding: 0 4px 0 6.5px; }
-  #slide .arrow {
-    height: 5px;
-    width: 5px;
-    background-color: red;
-    display: inline-block;
-    position: relative;
-    bottom: 1.5px; }
-    #slide .arrow.left {
-      left: -2.5px; }
-      #slide .arrow.left:before {
-        right: auto;
-        left: 100%; }
-      #slide .arrow.left:after {
-        right: auto;
-        left: 100%; }
-    #slide .arrow.right {
-      left: 2.5px; }
-      #slide .arrow.right:before {
-        left: auto;
-        right: 100%; }
-      #slide .arrow.right:after {
-        left: auto;
-        right: 100%; }
-    #slide .arrow:before {
-      content: "";
+#slide_wrapper {
+  position: relative; }
+  #slide_wrapper #slide {
+    background-image: url("img/test_images/slide3.jpg");
+    background-size: cover;
+    width: 100%;
+    min-height: 90%;
+    position: fixed; }
+    #slide_wrapper #slide .cog {
+      width: 40px;
+      height: 45px;
+      line-height: 33px;
+      display: inline-block;
+      background-color: #fff;
+      padding: 8px;
+      position: absolute;
+      top: 45px; }
+      #slide_wrapper #slide .cog i {
+        font-size: 25px;
+        vertical-align: middle;
+        text-align: center; }
+    #slide_wrapper #slide .arrowWrapper {
+      width: 45px;
+      height: 45px;
+      border-radius: 45px;
+      display: inline-block;
+      background-color: #fff;
+      position: absolute;
+      top: 160px;
+      text-align: center;
+      line-height: 45px;
+      cursor: pointer; }
+      #slide_wrapper #slide .arrowWrapper.left {
+        left: 10px;
+        padding: 0 4px 0 0.5px; }
+      #slide_wrapper #slide .arrowWrapper.right {
+        right: 10px;
+        padding: 0 4px 0 6.5px; }
+    #slide_wrapper #slide .arrow {
       height: 5px;
       width: 5px;
       background-color: red;
-      display: block;
-      position: absolute;
-      top: 100%; }
-    #slide .arrow:after {
-      content: "";
-      height: 5px;
-      width: 5px;
-      background-color: red;
-      display: block;
-      position: absolute;
-      bottom: 100%; }
+      display: inline-block;
+      position: relative;
+      bottom: 1.5px; }
+      #slide_wrapper #slide .arrow.left {
+        left: -2.5px; }
+        #slide_wrapper #slide .arrow.left:before {
+          right: auto;
+          left: 100%; }
+        #slide_wrapper #slide .arrow.left:after {
+          right: auto;
+          left: 100%; }
+      #slide_wrapper #slide .arrow.right {
+        left: 2.5px; }
+        #slide_wrapper #slide .arrow.right:before {
+          left: auto;
+          right: 100%; }
+        #slide_wrapper #slide .arrow.right:after {
+          left: auto;
+          right: 100%; }
+      #slide_wrapper #slide .arrow:before {
+        content: "";
+        height: 5px;
+        width: 5px;
+        background-color: red;
+        display: block;
+        position: absolute;
+        top: 100%; }
+      #slide_wrapper #slide .arrow:after {
+        content: "";
+        height: 5px;
+        width: 5px;
+        background-color: red;
+        display: block;
+        position: absolute;
+        bottom: 100%; }
 
 .slideLink {
   padding: 13px 54px 13px 20px;
@@ -331,9 +333,22 @@ body {
     text-align: center; }
 
 #description {
-  padding: 50px 15px;
-  max-width: 1170px;
+  padding: 50px 110px;
+  max-width: 100%;
   background-color: #1B2228;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  border-top: 1px dashed gray;
+  outline: 5px solid #1B2228; }
+  #description h3 {
+    text-align: center;
+    color: white;
+    font-weight: 600; }
+  #description p {
+    text-align: center;
+    display: inline-block;
+    color: #aaa;
+    font-size: 20px;
+    line-height: 34px; }
 
 /*# sourceMappingURL=style.css.map */
