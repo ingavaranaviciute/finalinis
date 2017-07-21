@@ -479,6 +479,8 @@ body {
     padding: 10px 10px 10px 115px;
     margin-bottom: 60px;
     position: relative; }
+    #services .serviceBox:hover h3 {
+      color: #1ccdca; }
     #services .serviceBox i {
       font-size: 50px;
       color: white;
@@ -496,7 +498,8 @@ body {
       margin: 0 0 12px;
       text-transform: uppercase;
       font-size: 17px;
-      color: #324545; }
+      color: #324545;
+      transition: color 0.5s ease-in-out; }
     #services .serviceBox span {
       font-size: 14px;
       color: #666666; }
@@ -514,26 +517,35 @@ body {
         color: #1ccdca; }
 
 .priceList .plan_price_in {
-  display: inline-block;
   position: absolute;
-  left: 96px;
-  border: 3px solid #1ccdca;
-  padding: 25px;
-  top: -65px;
   z-index: 1;
-  background-color: white;
-  border-radius: 3px; }
+  top: -51px;
+  left: 135px;
+  cursor: pointer; }
   .priceList .plan_price_in span {
     color: #1ccdca;
-    font-size: 24px; }
+    font-size: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 23px;
+    left: 21px;
+    text-align: center; }
+    .priceList .plan_price_in span.monthly {
+      font-size: 14px;
+      top: 54px;
+      left: 16px;
+      text-transform: uppercase; }
+    .priceList .plan_price_in span.priceM {
+      left: 28px; }
 .priceList .title {
-  padding: 30px;
+  padding: 65px 0 20px 0;
   color: #1ccdca;
   font-family: "Oswald", "Open Sans", sans-serif;
   font-size: 17px;
   font-weight: 400;
   letter-spacing: 1px;
-  position: relative; }
+  position: relative;
+  transition: all 0.7s linear; }
 .priceList li {
   text-align: center;
   color: #878787; }
@@ -554,5 +566,31 @@ body {
       background: #576162;
       border-color: #576162;
       color: white; }
+.priceList:hover .title {
+  background-color: #1ccdca;
+  color: white; }
+.priceList .different {
+  background-color: #1ccdca;
+  color: white; }
+
+#contact {
+  overflow: hidden;
+  padding: 0 90px 0 90px; }
+  #contact form label {
+    color: #888;
+    font-weight: normal;
+    text-align: left; }
+    #contact form label span {
+      color: #e74c3c; }
+  #contact form input {
+    border-radius: 2px;
+    border: 1px solid #ddd; }
+
+.formBtn {
+  margin-left: 196px;
+  background-color: #1ccdca;
+  color: white;
+  font-size: 15px;
+  padding: 8px 16px 8px 16px; }
 
 /*# sourceMappingURL=style.css.map */
