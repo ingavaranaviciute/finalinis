@@ -1,9 +1,6 @@
+var time=3000;
 
-$(document).ready(function() {
-    $('.progress_bar.fill_con').css("width",
-        function() {
-            return $(this).attr("aria-valuenow") + "%";
-        }
-    )
-});
-
+$('.clientsNumber').animateNumber({ number: 1500 }, time);
+$('.awardsNumber').animateNumber({ number: 13 }, time);
+$('.lineNumber').animateNumber({ number: 94771 }, time);
+$('.projectsNumber').animateNumber({ number: 384 }, time);
