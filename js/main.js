@@ -45,3 +45,21 @@ function projects(ingosElementas) {
 sr.reveal('.innerNumb.projects', {origin: 'top', beforeReveal: projects, delay: 750});
 
 
+
+
+
+// Tam kad sita f-ja naudotis, reiktu nusirodyt html'e skaicius iki kuriu turi dideti
+
+// function kvieciamaKaiAtsirandaKazkas(elemKurisAtsirado) {
+//
+//   // console.log(elemKurisAtsirado);
+//   var jQueryElementasKurisAtsirado = $(elemKurisAtsirado);
+//
+//   var animated = jQueryElementasKurisAtsirado.find('.animated');
+//
+//   var skaiciusKurisTuriButiUzauges = animated.text();
+//
+//   animated.animateNumber({number: skaiciusKurisTuriButiUzauges}, 1000);
+// }
+//
+// sr.reveal('.innerNumb', {origin: 'top', beforeReveal: kvieciamaKaiAtsirandaKazkas, delay: 0}, 300);
