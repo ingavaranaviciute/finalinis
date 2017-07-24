@@ -45,6 +45,32 @@ function projects(ingosElementas) {
 sr.reveal('.innerNumb.projects', {origin: 'top', beforeReveal: projects, delay: 750});
 
 
+//
+// $(document).ready(function() {
+//     $('.progress_bar .fill_con').css("width",
+//         function() {
+//             return $(this).attr("aria-valuenow") + "%";
+//         }
+//     )
+// });
+
+// function move() {
+//     var elem = document.getElementById("fill");
+//     var width = 1;
+//     var id = setInterval(frame, 10);
+//     function frame() {
+//         if (width >= 70) {
+//             clearInterval(id);
+//         } else {
+//             width++;
+//             elem.style.width = width + '%';
+//         }
+//     }
+// }
+
+
+
+
 
 
 
@@ -63,3 +89,45 @@ sr.reveal('.innerNumb.projects', {origin: 'top', beforeReveal: projects, delay: 
 // }
 //
 // sr.reveal('.innerNumb', {origin: 'top', beforeReveal: kvieciamaKaiAtsirandaKazkas, delay: 0}, 300);
+
+
+
+
+$(document).ready(function() {
+    $('.progress .progress-bar').css("width",
+        function() {
+            return $(this).attr("aria-valuenow") + "%";
+        }
+    )
+
+});
+sr.reveal('.progress', {duration: 1000});
+
+// function proBar(ingosElementas) {
+//     $('.val').animateNumber({number: 100});
+// }
+
+// sr.reveal('.last.progress', {beforeReveal: proBar, delay: 100});
+
+// $('#lines').animateNumber({ number: 165});
+//
+// var myIndex = 0;
+// carousel();
+//
+// function carousel() {
+//     var i;
+//     var x = document.getElementsByClassName("mySlides");
+//     for (i = 0; i < x.length; i++) {
+//         x[i].style.display = "none";
+//     }
+//     myIndex++;
+//     if (myIndex > x.length) {myIndex = 1}
+//     x[myIndex-1].style.display = "block";
+//     setTimeout(carousel, 5000);
+// }
+
+
+sr.reveal('.slideLink', {origin: 'right', duration: 900, distance: '500px'});
+sr.reveal('.slideHeading', {origin: 'right', duration: 1500, distance: '500px'});
+sr.reveal('.slideText', {origin: 'right', duration: 2100, distance: '500px'})
+sr.reveal('.slideShop', {origin: 'right', duration: 2400, distance: '500px'});

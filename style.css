@@ -129,6 +129,11 @@ body {
         #navbar ul li .navbarLink span:hover, #navbar ul li .navbarLink span.active {
           color: #1ccdca;
           transition: all 0.5s ease-in; }
+      #navbar ul li .drop {
+        color: #324545;
+        padding: 28px 18px;
+        display: block;
+        font-weight: 600; }
 
 .navbarLink:hover {
   text-decoration: none; }
@@ -148,15 +153,12 @@ body {
 .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #757575; }
-
 .form-control::-moz-placeholder {
   /* Firefox 19+ */
   color: #757575; }
-
 .form-control:-ms-input-placeholder {
   /* IE 10+ */
   color: #757575; }
-
 .form-control::-moz-placeholder {
   /* Firefox 18- */
   color: #757575; }
@@ -435,7 +437,7 @@ body {
     line-height: 35px; }
     .progress_bar .fill_con .fill {
       background: #0bacb8;
-      width: 80%;
+      width: 100%;
       height: 100%;
       white-space: nowrap;
       position: absolute;
@@ -467,13 +469,43 @@ body {
         text-transform: uppercase;
         margin-left: 15px; }
 
+#chooseUs {
+  background-color: #f9fafc;
+  border-bottom: 1px solid #eaebed;
+  border-top: 1px solid #eaebed; }
+  #chooseUs .rocket {
+    background-image: url("img/test_images/porto5.jpg");
+    height: 251px;
+    background-size: cover; }
+  #chooseUs .description {
+    background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+    padding: 0;
+    border: none; }
+  #chooseUs .widhoutBorder a {
+    border-right: 1px solid #cccccc;
+    border-left: none;
+    border-radius: 0 0 0 0;
+    border-top: 1px solid #cccccc; }
+    #chooseUs .widhoutBorder a:hover {
+      background-color: white; }
+  #chooseUs .content p {
+    font-family: "Open Sans", sans-serif;
+    color: #666666;
+    line-height: 24px;
+    margin-bottom: 15px; }
+  #chooseUs .content li {
+    font-family: "Open Sans", sans-serif;
+    color: #666666;
+    line-height: 24px;
+    list-style-type: none;
+    margin-bottom: 15px; }
+
 #runningNumbers i {
   text-align: center;
   font-size: 32px;
   margin: 0 auto;
   color: #1ccdca;
   display: block; }
-
 #runningNumbers .animated {
   font-size: 32px;
   font-weight: 700;
@@ -483,7 +515,6 @@ body {
   color: #666666;
   line-height: 1.5;
   display: block; }
-
 #runningNumbers span {
   font-size: 22px;
   letter-spacing: 1px;
@@ -495,7 +526,6 @@ body {
   color: grey;
   line-height: 1.5;
   display: block; }
-
 #runningNumbers .innerNumb {
   padding-bottom: 90px;
   padding-top: 90px; }
@@ -672,7 +702,6 @@ body {
       text-transform: uppercase; }
     .priceList .plan_price_in span.priceM {
       left: 28px; }
-
 .priceList .title {
   padding: 65px 0 20px 0;
   color: #1ccdca;
@@ -682,7 +711,6 @@ body {
   letter-spacing: 1px;
   position: relative;
   transition: all 0.7s linear; }
-
 .priceList li {
   text-align: center;
   color: #878787; }
@@ -703,11 +731,9 @@ body {
       background: #576162;
       border-color: #576162;
       color: white; }
-
 .priceList:hover .title {
   background-color: #1ccdca;
   color: white; }
-
 .priceList .different {
   background-color: #1ccdca;
   color: white; }
@@ -800,3 +826,60 @@ footer {
       font-size: 13px; }
   .footer_copyright .footer_menu {
     text-align: right; }
+
+.progress {
+  height: 35px; }
+
+.progress .skill {
+  line-height: 35px;
+  padding: 0;
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+  opacity: 1;
+  color: white; }
+
+.progress .skill .val {
+  float: right;
+  font-style: normal;
+  margin: 0 5px 0 0; }
+
+.progress-bar {
+  text-align: left;
+  transition-duration: 3s;
+  position: relative; }
+
+.val {
+  color: #324545;
+  background-color: white;
+  width: 35px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 1px;
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  border-radius: 3px; }
+
+.progressBar {
+  width: 50%; }
+
+.darkFill {
+  background-image: linear-gradient(to bottom, #2a3136 0, #2a3136 100%); }
+
+.web {
+  background-image: linear-gradient(to bottom, #0bacb8 0, #0bacb8 100%); }
+
+.programming {
+  background-image: linear-gradient(to bottom, #3a94b2 0, #3a94b2 100%); }
+
+.html {
+  background-image: linear-gradient(to bottom, #1ccdca 0, #1ccdca 100%); }
+
+.Wordpress {
+  background-image: linear-gradient(to bottom, #00c194 0, #00c194 100%); }
+
+.Joomla {
+  background-image: linear-gradient(to bottom, #e74c3c 0, #e74c3c 100%); }
+
+/*# sourceMappingURL=style.css.map */
