@@ -4,13 +4,12 @@ html, body, .topbar {
   font-family: "Open Sans", sans-serif; }
 
 body {
-  height: 100%;
   margin: 0; }
 
 /*HEADER*/
 .topbar {
   overflow: visible;
-  padding: 10px 105px 10px 105px;
+  padding: 10px 105px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #e4e4e4; }
   .topbar:after {
@@ -100,11 +99,16 @@ body {
 
 #navbar {
   clear: both;
-  overflow: hidden;
-  padding: 10px 105px 10px 105px;
-  height: 80px;
+  padding: 0 105px;
   background-color: white;
-  z-index: 1000; }
+  z-index: 1000;
+  position: relative; }
+  #navbar .secondary {
+    float: right;
+    padding-top: 16px; }
+  #navbar .search {
+    display: inline-block;
+    position: relative; }
   #navbar .logo {
     float: left; }
     #navbar .logo .darkLogo {
@@ -142,9 +146,9 @@ body {
 .searchIkon {
   color: #1ccdca;
   font-size: 15px;
-  left: 25px;
+  left: 12px;
   position: absolute;
-  top: 28px;
+  top: 10px;
   cursor: pointer; }
 
 #search {
@@ -164,15 +168,12 @@ body {
   /* Firefox 18- */
   color: #757575; }
 
-#cartSpan {
+#cartIcon {
   padding: 11px;
   border-radius: 100px;
   border: 1px solid #ccc;
   display: inline-block;
-  float: right;
-  position: relative;
-  bottom: 85px;
-  right: 15px; }
+  position: relative; }
 
 #cart {
   color: #818b8d;
@@ -338,7 +339,6 @@ body {
 
 #description {
   padding: 50px 110px;
-  max-width: 100%;
   background-color: #1B2228;
   overflow: hidden;
   border-top: 1px dashed gray;
