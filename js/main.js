@@ -101,7 +101,20 @@ $(document).ready(function() {
     )
 
 });
-sr.reveal('.progress', {duration: 1000});
+
+function startProgress(revealedBar) {
+    var valElementas = $(revealedBar).find(".val");
+    var number = $(valElementas).text();
+    
+    $(valElementas).animateNumber({number:number}, time);
+
+
+}
+
+sr.reveal('.progress', {beforeReveal: startProgress, duration: 1000});
+
+
+
 
 // function proBar(ingosElementas) {
 //     $('.val').animateNumber({number: 100});

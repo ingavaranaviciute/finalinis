@@ -178,11 +178,10 @@ body {
 
     }
   }
-  ul {
-    float: left;
+  .navbar-nav {
     padding-left: 25px;
     padding-right: 20px;
-    li {
+    & > li {
       text-decoration: none;
       display: inline-block;
 

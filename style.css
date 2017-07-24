@@ -118,23 +118,22 @@ body {
       left: 1.5px;
       max-height: 100%;
       cursor: pointer; }
-  #navbar ul {
-    float: left;
+  #navbar .navbar-nav {
     padding-left: 25px;
     padding-right: 20px; }
-    #navbar ul li {
+    #navbar .navbar-nav > li {
       text-decoration: none;
       display: inline-block; }
-      #navbar ul li .navbarLink span {
+      #navbar .navbar-nav > li .navbarLink span {
         color: #324545;
         padding: 28px 18px;
         display: block;
         font-weight: 600;
         font-size: 12px; }
-        #navbar ul li .navbarLink span:hover, #navbar ul li .navbarLink span.active {
+        #navbar .navbar-nav > li .navbarLink span:hover, #navbar .navbar-nav > li .navbarLink span.active {
           color: #1ccdca;
           transition: all 0.5s ease-in; }
-      #navbar ul li .drop {
+      #navbar .navbar-nav > li .drop {
         color: #324545;
         padding: 28px 18px;
         display: block;
