@@ -19,6 +19,7 @@ body {
 /*HEADER*/
 //
 
+
 .topbar {
   overflow: visible;
   padding: 10px 105px 10px 105px;
@@ -154,6 +155,8 @@ body {
   overflow: hidden;
   padding: 10px 105px 10px 105px;
   height: 80px;
+  background-color: white;
+  z-index: 1000;
   .logo {
     float: left;
     .darkLogo {
@@ -664,7 +667,17 @@ $placeholderColor: #757575;
 
   .rocket {
     background-image: url("img/test_images/porto5.jpg");
-    height: 251px;
+    height: 270px;
+    background-size: cover;
+  }
+  .balloon {
+    background-image: url("img/test_images/porto3.jpg");
+    height: 270px;
+    background-size: cover;
+  }
+  .airplane {
+    background-image: url("img/test_images/porto4.jpg");
+    height: 270px;
     background-size: cover;
   }
   .description {
@@ -680,27 +693,51 @@ $placeholderColor: #757575;
       border-left: none;
       border-radius: 0 0 0 0;
       border-top: 1px solid #cccccc;
+      color: #888;
+      line-height: 50px;
+      width: auto;
+      text-align: left;
+      font-size: 14px;
+      padding: 0 25px;
       &:hover {
         background-color: white;
+        color: #324545;
         //border-top: 3px solid #1ccdca;
+      }
+      &:active {
+        color: #1ccdca;
       }
     }
   }
-.content{
-  p{
-    font-family: "Open Sans", sans-serif;
-    color: #666666;
-    line-height: 24px;
-    margin-bottom: 15px;
+  .content {
+    p {
+      font-family: "Open Sans", sans-serif;
+      color: #666666;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+    li {
+      font-family: "Open Sans", sans-serif;
+      color: #666666;
+      line-height: 24px;
+      list-style-type: none;
+      margin-bottom: 8px;
+
+      i {
+        content: "\f061";
+        background-color: #e74c3c;
+        padding: 4px;
+        border-radius: 10px;
+        color: white;
+        font-weight: normal;
+        font-size: 10px;
+        margin-right: 10px;
+      }
+    }
   }
-  li{
-    font-family: "Open Sans", sans-serif;
-    color: #666666;
-    line-height: 24px;
-    list-style-type: none;
-    margin-bottom: 15px;
+  ul {
+    padding-left: 0;
   }
-}
 }
 
 //choose uz ends

@@ -103,7 +103,9 @@ body {
   clear: both;
   overflow: hidden;
   padding: 10px 105px 10px 105px;
-  height: 80px; }
+  height: 80px;
+  background-color: white;
+  z-index: 1000; }
   #navbar .logo {
     float: left; }
     #navbar .logo .darkLogo {
@@ -475,7 +477,15 @@ body {
   border-top: 1px solid #eaebed; }
   #chooseUs .rocket {
     background-image: url("img/test_images/porto5.jpg");
-    height: 251px;
+    height: 270px;
+    background-size: cover; }
+  #chooseUs .balloon {
+    background-image: url("img/test_images/porto3.jpg");
+    height: 270px;
+    background-size: cover; }
+  #chooseUs .airplane {
+    background-image: url("img/test_images/porto4.jpg");
+    height: 270px;
     background-size: cover; }
   #chooseUs .description {
     background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
@@ -485,9 +495,18 @@ body {
     border-right: 1px solid #cccccc;
     border-left: none;
     border-radius: 0 0 0 0;
-    border-top: 1px solid #cccccc; }
+    border-top: 1px solid #cccccc;
+    color: #888;
+    line-height: 50px;
+    width: auto;
+    text-align: left;
+    font-size: 14px;
+    padding: 0 25px; }
     #chooseUs .widhoutBorder a:hover {
-      background-color: white; }
+      background-color: white;
+      color: #324545; }
+    #chooseUs .widhoutBorder a:active {
+      color: #1ccdca; }
   #chooseUs .content p {
     font-family: "Open Sans", sans-serif;
     color: #666666;
@@ -498,7 +517,18 @@ body {
     color: #666666;
     line-height: 24px;
     list-style-type: none;
-    margin-bottom: 15px; }
+    margin-bottom: 8px; }
+    #chooseUs .content li i {
+      content: "\f061";
+      background-color: #e74c3c;
+      padding: 4px;
+      border-radius: 10px;
+      color: white;
+      font-weight: normal;
+      font-size: 10px;
+      margin-right: 10px; }
+  #chooseUs ul {
+    padding-left: 0; }
 
 #runningNumbers i {
   text-align: center;

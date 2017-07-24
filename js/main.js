@@ -131,3 +131,4 @@ sr.reveal('.slideLink', {origin: 'right', duration: 900, distance: '500px'});
 sr.reveal('.slideHeading', {origin: 'right', duration: 1500, distance: '500px'});
 sr.reveal('.slideText', {origin: 'right', duration: 2100, distance: '500px'})
 sr.reveal('.slideShop', {origin: 'right', duration: 2400, distance: '500px'});
+
