@@ -171,3 +171,21 @@ function toggleIcon(e) {
 }
 $('.panel-group').on('hidden.bs.collapse', toggleIcon);
 $('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+
+// function myMap() {
+//   var mapProp = {
+//     center: new google.maps.LatLng(55.724002, 21.127996),
+//     zoom: 17,
+//   };
+//   var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+// }
+
+function myMap() {
+  var myCenter = new google.maps.LatLng(55.724002, 21.127996);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 16};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}

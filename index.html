@@ -391,7 +391,7 @@
 
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 whyUs">
                     <div class="maintitleUpper">
                         <h2><span class="line"><span class="dot"></span></span>Why Choose Us?</h2>
                     </div>
@@ -399,7 +399,7 @@
                     <div class="panel with-nav-tabs panel-default">
                         <div class="panel-heading description">
                             <ul class="nav nav-tabs widhoutBorder">
-                                <li role="presentation"><a href="#tab1default" data-toggle="tab" class="topText active">
+                                <li role="presentation"><a href="#tab1default" data-toggle="tab" class="topText active df">
                                     Quality</a>
                                 </li>
                                 <li role="presentation"><a href="#tab2default" data-toggle="tab" class="topText">
@@ -568,7 +568,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
-                                    <a class="collapsed topTitle" role="button" data-toggle="collapse"
+                                    <a class="topTitle" role="button" data-toggle="collapse"
                                        data-parent="#accordion"
                                        href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <i class="more-less glyphicon glyphicon-plus"></i>
@@ -577,7 +577,7 @@
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
+                            <div id="collapseOne" class="panel-collapse collapse in " role="tabpanel"
                                  aria-labelledby="headingOne">
                                 <div class="panel-body">
                                     <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
@@ -1074,6 +1074,7 @@
     <!--LOKATION-->
     <div id="location">
         <h2>our location</h2>
+        <div id="map" style="width:100%;height:400px;"></div>
     </div>
     <!--dar tures buti mapas-->
     <!--location ends-->
@@ -1118,7 +1119,6 @@
 
 
 
-
 <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -1131,5 +1131,7 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfM2xcBOMeGYkcxE7XrZ7XO693t4Pwteo&callback=myMap"></script>
+<!--mano google raktas: AIzaSyCfM2xcBOMeGYkcxE7XrZ7XO693t4Pwteo-->
 </body>
 </html>

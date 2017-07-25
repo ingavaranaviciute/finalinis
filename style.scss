@@ -193,9 +193,10 @@ body {
           display: block;
           font-weight: 600;
           font-size: 12px;
+          transition: all 0.5s ease-in;
           &:hover, &.active {
             color: #1ccdca;
-            transition: all 0.5s ease-in;
+
           }
         }
       }
@@ -426,10 +427,11 @@ $placeholderColor: #757575;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.5s ease;
 
     &:hover {
       background-color: darkred;
-      transition: all 0.5s ease;
+
     }
 
     i {
@@ -694,13 +696,31 @@ $placeholderColor: #757575;
 //SKILLS ENDS
 //choose us
 #chooseUs {
+
   background-color: #f9fafc;
   border-bottom: 1px solid #eaebed;
   border-top: 1px solid #eaebed;
   .chooseUsContainer {
     padding: 90px 15px;
   }
+  .whyUs {
+    .panel {
+      background-color: transparent;
+    }
 
+    .panel-default {
+      border: none;
+      box-shadow: none;
+    }
+    .panel-body {
+      border: 0.5px solid #e5e5e5;
+      background-color: white;
+      border-top: 0;
+    }
+  }
+  .nav-tabs > li{
+   background-color: white;
+  }
   .maintitleUpper {
     text-transform: uppercase;
     margin-bottom: 35px;
@@ -711,6 +731,8 @@ $placeholderColor: #757575;
     padding-bottom: 20px;
     font-family: "Oswald", "Open Sans", sans-serif;
     line-height: 40px;
+    box-shadow: none;
+    border: none;
   }
 
   .rocket {
@@ -729,15 +751,16 @@ $placeholderColor: #757575;
     background-size: cover;
   }
   .description {
-    background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+    background-image: none;
+    background-color: transparent;
     padding: 0;
     border: none;
   }
   .widhoutBorder {
-    //border-bottom: none;
+    border-bottom: none;
 
     .topText {
-      border-right: 1px solid #cccccc;
+      border-right: 1px solid #e5e5e5;
       border-left: none;
       border-radius: 0 0 0 0;
       //border-top: 0.5px solid #ccc;
@@ -749,28 +772,39 @@ $placeholderColor: #757575;
       font-size: 14px;
       padding: 0 25px;
       margin-top: 3px;
-      transition: all 0.6s ease-in;
+      transition: color 0.6s ease-in;
+      border-bottom: 1px solid #e5e5e5;
+      &.df{
+        border-left: 1px solid #e5e5e5;
+      }
       &:hover {
         background-color: white;
         color: #324545;
         //border-top: 3px solid #1ccdca;
       }
+
+
+      &:before {
+        content: "";
+        background: transparent;
+        display: block;
+        height: 3px;
+        left: -1px;
+        position: absolute;
+        top: -1px;
+        width: 102%;
+        transition: background 0.4s ease;
+      }
+
       &:focus, &.active {
         color: #1ccdca;
         box-shadow: transparent;
+        border-bottom: none;
+
         //box-shadow: 0px -1px 0px 0px transparent;
         //border-top: 2px solid #1ccdcb;
-
         &:before {
-          content: "";
           background: #1ccdca;
-          display: block;
-          height: 3px;
-          left: -1px;
-          position: absolute;
-          top: -1px;
-          width: 102%;
-
         }
       }
     }

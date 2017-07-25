@@ -131,10 +131,10 @@ body {
           padding: 28px 18px;
           display: block;
           font-weight: 600;
-          font-size: 12px; }
+          font-size: 12px;
+          transition: all 0.5s ease-in; }
           #navbar .navbar-nav > li .navbarLink span:hover, #navbar .navbar-nav > li .navbarLink span.active {
-            color: #1ccdca;
-            transition: all 0.5s ease-in; }
+            color: #1ccdca; }
       #navbar .navbar-nav > li .drop {
         color: #324545;
         padding: 28px 18px;
@@ -301,10 +301,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.5s ease; }
     .slideLink span:hover {
-      background-color: darkred;
-      transition: all 0.5s ease; }
+      background-color: darkred; }
     .slideLink span i {
       font-size: 20px;
       color: white; }
@@ -498,6 +498,17 @@ body {
   border-top: 1px solid #eaebed; }
   #chooseUs .chooseUsContainer {
     padding: 90px 15px; }
+  #chooseUs .whyUs .panel {
+    background-color: transparent; }
+  #chooseUs .whyUs .panel-default {
+    border: none;
+    box-shadow: none; }
+  #chooseUs .whyUs .panel-body {
+    border: 0.5px solid #e5e5e5;
+    background-color: white;
+    border-top: 0; }
+  #chooseUs .nav-tabs > li {
+    background-color: white; }
   #chooseUs .maintitleUpper {
     text-transform: uppercase;
     margin-bottom: 35px;
@@ -507,7 +518,9 @@ body {
     letter-spacing: 1px;
     padding-bottom: 20px;
     font-family: "Oswald", "Open Sans", sans-serif;
-    line-height: 40px; }
+    line-height: 40px;
+    box-shadow: none;
+    border: none; }
   #chooseUs .rocket {
     background-image: url("img/test_images/porto5.jpg");
     height: 270px;
@@ -521,37 +534,47 @@ body {
     height: 270px;
     background-size: cover; }
   #chooseUs .description {
-    background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+    background-image: none;
+    background-color: transparent;
     padding: 0;
     border: none; }
-  #chooseUs .widhoutBorder .topText {
-    border-right: 1px solid #cccccc;
-    border-left: none;
-    border-radius: 0 0 0 0;
-    box-shadow: 0 -0.5px 0 0 #ccc;
-    color: #888;
-    line-height: 50px;
-    width: auto;
-    text-align: left;
-    font-size: 14px;
-    padding: 0 25px;
-    margin-top: 3px;
-    transition: all 0.6s ease-in; }
-    #chooseUs .widhoutBorder .topText:hover {
-      background-color: white;
-      color: #324545; }
-    #chooseUs .widhoutBorder .topText:focus, #chooseUs .widhoutBorder .topText.active {
-      color: #1ccdca;
-      box-shadow: transparent; }
-      #chooseUs .widhoutBorder .topText:focus:before, #chooseUs .widhoutBorder .topText.active:before {
+  #chooseUs .widhoutBorder {
+    border-bottom: none; }
+    #chooseUs .widhoutBorder .topText {
+      border-right: 1px solid #e5e5e5;
+      border-left: none;
+      border-radius: 0 0 0 0;
+      box-shadow: 0 -0.5px 0 0 #ccc;
+      color: #888;
+      line-height: 50px;
+      width: auto;
+      text-align: left;
+      font-size: 14px;
+      padding: 0 25px;
+      margin-top: 3px;
+      transition: color 0.6s ease-in;
+      border-bottom: 1px solid #e5e5e5; }
+      #chooseUs .widhoutBorder .topText.df {
+        border-left: 1px solid #e5e5e5; }
+      #chooseUs .widhoutBorder .topText:hover {
+        background-color: white;
+        color: #324545; }
+      #chooseUs .widhoutBorder .topText:before {
         content: "";
-        background: #1ccdca;
+        background: transparent;
         display: block;
         height: 3px;
         left: -1px;
         position: absolute;
         top: -1px;
-        width: 102%; }
+        width: 102%;
+        transition: background 0.4s ease; }
+      #chooseUs .widhoutBorder .topText:focus, #chooseUs .widhoutBorder .topText.active {
+        color: #1ccdca;
+        box-shadow: transparent;
+        border-bottom: none; }
+        #chooseUs .widhoutBorder .topText:focus:before, #chooseUs .widhoutBorder .topText.active:before {
+          background: #1ccdca; }
   #chooseUs .content p {
     font-family: "Open Sans", sans-serif;
     color: #666666;
