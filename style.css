@@ -177,12 +177,15 @@ body {
 .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #757575; }
+
 .form-control::-moz-placeholder {
   /* Firefox 19+ */
   color: #757575; }
+
 .form-control:-ms-input-placeholder {
   /* IE 10+ */
   color: #757575; }
+
 .form-control::-moz-placeholder {
   /* Firefox 18- */
   color: #757575; }
@@ -496,9 +499,9 @@ body {
   #chooseUs .chooseUsContainer {
     padding: 90px 15px; }
   #chooseUs .maintitleUpper {
-    display: inline-block;
+    text-transform: uppercase;
     margin-bottom: 35px;
-    font-size: 22px;
+    font-size: 20px;
     color: #324545;
     font-weight: 400;
     letter-spacing: 1px;
@@ -601,7 +604,13 @@ body {
 .panel-title > a {
   display: block;
   padding: 12px 25px 11px 25px;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: background-color 0.8s linear;
+  background-color: #1ccdca;
+  color: white; }
+  .panel-title > a.collapsed {
+    color: #ccc;
+    background-color: white; }
 
 .more-less {
   float: right;
@@ -618,19 +627,13 @@ body {
   padding-top: 60px;
   padding-bottom: 60px; }
 
-.topTitle {
-  background-color: white;
-  transition: background-color 0.8s linear; }
-  .topTitle:focus {
-    background-color: #1ccdca;
-    color: white; }
-
 #runningNumbers i {
   text-align: center;
   font-size: 32px;
   margin: 0 auto;
   color: #1ccdca;
   display: block; }
+
 #runningNumbers .animated {
   font-size: 32px;
   font-weight: 700;
@@ -640,6 +643,7 @@ body {
   color: #666666;
   line-height: 1.5;
   display: block; }
+
 #runningNumbers span {
   font-size: 22px;
   letter-spacing: 1px;
@@ -651,6 +655,7 @@ body {
   color: grey;
   line-height: 1.5;
   display: block; }
+
 #runningNumbers .innerNumb {
   padding-bottom: 90px;
   padding-top: 90px; }
@@ -827,6 +832,7 @@ body {
       text-transform: uppercase; }
     .priceList .plan_price_in span.priceM {
       left: 28px; }
+
 .priceList .title {
   padding: 65px 0 20px 0;
   color: #1ccdca;
@@ -836,6 +842,7 @@ body {
   letter-spacing: 1px;
   position: relative;
   transition: all 0.7s linear; }
+
 .priceList li {
   text-align: center;
   color: #878787; }
@@ -856,9 +863,11 @@ body {
       background: #576162;
       border-color: #576162;
       color: white; }
+
 .priceList:hover .title {
   background-color: #1ccdca;
   color: white; }
+
 .priceList .different {
   background-color: #1ccdca;
   color: white; }
@@ -1006,5 +1015,3 @@ footer {
 
 .Joomla {
   background-image: linear-gradient(to bottom, #e74c3c 0, #e74c3c 100%); }
-
-/*# sourceMappingURL=style.css.map */

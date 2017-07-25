@@ -3,7 +3,6 @@ var time = 3000;
 // $('.clientsNumber').animateNumber({number: 1500}, time);
 
 
-
 // // $(document).ready(function() {
 //   $(window).fadeThis({
 //     offset: 30
@@ -69,11 +68,6 @@ sr.reveal('.innerNumb.projects', {origin: 'top', beforeReveal: projects, delay: 
 // }
 
 
-
-
-
-
-
 // Tam kad sita f-ja naudotis, reiktu nusirodyt html'e skaicius iki kuriu turi dideti
 
 // function kvieciamaKaiAtsirandaKazkas(elemKurisAtsirado) {
@@ -91,34 +85,50 @@ sr.reveal('.innerNumb.projects', {origin: 'top', beforeReveal: projects, delay: 
 // sr.reveal('.innerNumb', {origin: 'top', beforeReveal: kvieciamaKaiAtsirandaKazkas, delay: 0}, 300);
 
 
+// $(document).ready(function() {
+//     $('.progress .progress-bar').css("width",
+//         function() {
+//             return $(this).attr("aria-valuenow") + "%";
+//
+//
+//         }
+//     )
+//
+// });
 
 
-$(document).ready(function() {
-    $('.progress .progress-bar').css("width",
-        function() {
-            return $(this).attr("aria-valuenow") + "%";
-
-
-        }
-    )
-
-});
-
+// Sitos funkcijos paskirtys:
+// 1. Animuoti skaiciu (po to kai atsiranda elementas - uzsiskrollina)
+// 2. Animuoti sito (atsiradusio) elemento progress-bar
 function startProgress(revealedBar) {
-    var valElementas = $(revealedBar).find(".animVal");
-    var number = $(valElementas).text();
-    console.log(revealedBar);
+  // revealedBar yra vienas is .progress elementu
 
 
+  // Su jQuery galime tame elemente rasti kita elementa pagal jo klase, ar id,  ar kt.
+  var valElementas = $(revealedBar).find(".animVal");
 
-    $(valElementas).animateNumber({number:number}, time);
 
+  // turint (arba selectinant su jQruery) elementa, galime is to elemento paimti jo teksta (aisku ir panaudoti
+  // pvz. isideti ta teksta i kintamaji.
+  var number = $(valElementas).text();
+  console.log(revealedBar);
+
+
+  $(valElementas).animateNumber({number: number}, time);
+  // $('.progress-1 .animVal').animateNumber({number: 80}, time);
+
+
+  // ties sita vieta jau pradejom animuoti numeri,
+  // tad judam toliau ties progress-baro animavimu
+
+  var progressBar = $(revealedBar).find(".progress-bar");
+  var width = $(progressBar).attr("aria-valuenow");
+
+  $(progressBar).css("width", width + "%")
 
 }
 
 sr.reveal('.progress', {beforeReveal: startProgress, duration: 1000});
-
-
 
 
 // function proBar(ingosElementas) {
@@ -154,10 +164,10 @@ $('#navbar').stickit();
 
 
 function toggleIcon(e) {
-    $(e.target)
-        .prev('.panel-heading')
-        .find(".more-less")
-        .toggleClass('glyphicon-plus glyphicon-minus');
+  $(e.target)
+    .prev('.panel-heading')
+    .find(".more-less")
+    .toggleClass('glyphicon-plus glyphicon-minus');
 }
 $('.panel-group').on('hidden.bs.collapse', toggleIcon);
 $('.panel-group').on('shown.bs.collapse', toggleIcon);

@@ -697,14 +697,14 @@ $placeholderColor: #757575;
   background-color: #f9fafc;
   border-bottom: 1px solid #eaebed;
   border-top: 1px solid #eaebed;
-  .chooseUsContainer{
+  .chooseUsContainer {
     padding: 90px 15px;
   }
 
-  .maintitleUpper{
-    display: inline-block;
+  .maintitleUpper {
+    text-transform: uppercase;
     margin-bottom: 35px;
-    font-size: 22px;
+    font-size: 20px;
     color: #324545;
     font-weight: 400;
     letter-spacing: 1px;
@@ -761,16 +761,17 @@ $placeholderColor: #757575;
         //box-shadow: 0px -1px 0px 0px transparent;
         //border-top: 2px solid #1ccdcb;
 
-      &:before {
-        content: "";
-        background: #1ccdca;
-        display: block;
-        height: 3px;
-        left: -1px;
-        position: absolute;
-        top: -1px;
-        width: 102%;
-      }
+        &:before {
+          content: "";
+          background: #1ccdca;
+          display: block;
+          height: 3px;
+          left: -1px;
+          position: absolute;
+          top: -1px;
+          width: 102%;
+
+        }
       }
     }
   }
@@ -810,7 +811,7 @@ $placeholderColor: #757575;
 * Get free snippets on bootpen.com
 *******************************/
 
-.myIcon{
+.myIcon {
   color: #ccc;
   font-size: 20px;
   margin-right: 8px;
@@ -834,15 +835,22 @@ $placeholderColor: #757575;
 
 }
 
-
 .panel-title {
   font-size: 14px;
+
 }
 
 .panel-title > a {
   display: block;
   padding: 12px 25px 11px 25px;
   text-decoration: none;
+  transition: background-color 0.8s linear;
+  background-color: #1ccdca;
+  color: white;
+  &.collapsed {
+    color: #ccc;
+    background-color: white;
+  }
 }
 
 .more-less {
@@ -864,16 +872,6 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.topTitle {
-  background-color: white;
-  transition: background-color 0.8s linear;
-&:focus{
-  background-color: #1ccdca;
-  color: white;
-}
-  }
-
 
 //choose uz ends
 
