@@ -103,9 +103,10 @@ $(document).ready(function() {
 });
 
 function startProgress(revealedBar) {
-    var valElementas = $(revealedBar).find(".val");
+    var valElementas = $(revealedBar).find(".animVal");
     var number = $(valElementas).text();
-    
+    console.log(revealedBar);
+
     $(valElementas).animateNumber({number:number}, time);
 
 
