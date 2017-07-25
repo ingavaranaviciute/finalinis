@@ -97,6 +97,8 @@ $(document).ready(function() {
     $('.progress .progress-bar').css("width",
         function() {
             return $(this).attr("aria-valuenow") + "%";
+
+
         }
     )
 
@@ -106,6 +108,8 @@ function startProgress(revealedBar) {
     var valElementas = $(revealedBar).find(".animVal");
     var number = $(valElementas).text();
     console.log(revealedBar);
+
+
 
     $(valElementas).animateNumber({number:number}, time);
 
@@ -147,3 +151,13 @@ sr.reveal('.slideText', {origin: 'right', duration: 2100, distance: '500px'})
 sr.reveal('.slideShop', {origin: 'right', duration: 2400, distance: '500px'});
 
 $('#navbar').stickit();
+
+
+function toggleIcon(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);

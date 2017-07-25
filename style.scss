@@ -17,7 +17,6 @@ body {
 /*HEADER*/
 //
 
-
 .topbar {
   overflow: visible;
   padding: 10px 105px;
@@ -186,12 +185,13 @@ body {
       display: inline-block;
 
       .navbarLink {
+        text-decoration: none;
+
         span {
           color: #324545;
           padding: 28px 18px;
           display: block;
           font-weight: 600;
-
           font-size: 12px;
           &:hover, &.active {
             color: #1ccdca;
@@ -204,7 +204,36 @@ body {
         padding: 28px 18px;
         display: block;
         font-weight: 600;
+        text-decoration: none;
       }
+    }
+  }
+}
+
+.hoverDropdown {
+  &:hover {
+    .pagesMenu {
+      display: block;
+    }
+  }
+}
+
+.pagesMenu {
+  background-color: #13181A;
+  li {
+    width: 195px;
+
+  }
+  .pagesMenuDropdown {
+    color: #cccccc;
+    text-transform: uppercase;
+    border-bottom: 0.3px solid #1B2228;
+    padding: 9px 10px;
+    font-size: 12px;
+    &:hover {
+      background-image: linear-gradient(to bottom, black 0, black 100%);
+      color: #ccc;
+
     }
   }
 }
@@ -668,6 +697,21 @@ $placeholderColor: #757575;
   background-color: #f9fafc;
   border-bottom: 1px solid #eaebed;
   border-top: 1px solid #eaebed;
+  .chooseUsContainer{
+    padding: 90px 15px;
+  }
+
+  .maintitleUpper{
+    display: inline-block;
+    margin-bottom: 35px;
+    font-size: 22px;
+    color: #324545;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    font-family: "Oswald", "Open Sans", sans-serif;
+    line-height: 40px;
+  }
 
   .rocket {
     background-image: url("img/test_images/porto5.jpg");
@@ -692,24 +736,41 @@ $placeholderColor: #757575;
   .widhoutBorder {
     //border-bottom: none;
 
-    a {
+    .topText {
       border-right: 1px solid #cccccc;
       border-left: none;
       border-radius: 0 0 0 0;
-      border-top: 1px solid #cccccc;
+      //border-top: 0.5px solid #ccc;
+      box-shadow: 0 -0.5px 0 0 #ccc;
       color: #888;
       line-height: 50px;
       width: auto;
       text-align: left;
       font-size: 14px;
       padding: 0 25px;
+      margin-top: 3px;
+      transition: all 0.6s ease-in;
       &:hover {
         background-color: white;
         color: #324545;
         //border-top: 3px solid #1ccdca;
       }
-      &:active {
+      &:focus, &.active {
         color: #1ccdca;
+        box-shadow: transparent;
+        //box-shadow: 0px -1px 0px 0px transparent;
+        //border-top: 2px solid #1ccdcb;
+
+      &:before {
+        content: "";
+        background: #1ccdca;
+        display: block;
+        height: 3px;
+        left: -1px;
+        position: absolute;
+        top: -1px;
+        width: 102%;
+      }
       }
     }
   }
@@ -743,6 +804,76 @@ $placeholderColor: #757575;
     padding-left: 0;
   }
 }
+
+/*******************************
+* Does not work properly if "in" is added after "collapse".
+* Get free snippets on bootpen.com
+*******************************/
+
+.myIcon{
+  color: #ccc;
+  font-size: 20px;
+  margin-right: 8px;
+  &:focus {
+    color: white;
+  }
+}
+
+.panel-group .panel {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #e5e5e5;
+}
+
+.panel-default > .panel-heading {
+  padding: 0;
+  border-radius: 0;
+  color: #666666;
+  background-color: white;
+  border-color: #EEEEEE;
+
+}
+
+
+.panel-title {
+  font-size: 14px;
+}
+
+.panel-title > a {
+  display: block;
+  padding: 12px 25px 11px 25px;
+  text-decoration: none;
+}
+
+.more-less {
+  float: right;
+  color: #cecece;
+
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #EEEEEE;
+}
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+  background-color: white;
+}
+
+.demo {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.topTitle {
+  background-color: white;
+  transition: background-color 0.8s linear;
+&:focus{
+  background-color: #1ccdca;
+  color: white;
+}
+  }
+
 
 //choose uz ends
 

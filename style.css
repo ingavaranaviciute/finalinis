@@ -124,20 +124,40 @@ body {
     #navbar .navbar-nav > li {
       text-decoration: none;
       display: inline-block; }
-      #navbar .navbar-nav > li .navbarLink span {
-        color: #324545;
-        padding: 28px 18px;
-        display: block;
-        font-weight: 600;
-        font-size: 12px; }
-        #navbar .navbar-nav > li .navbarLink span:hover, #navbar .navbar-nav > li .navbarLink span.active {
-          color: #1ccdca;
-          transition: all 0.5s ease-in; }
+      #navbar .navbar-nav > li .navbarLink {
+        text-decoration: none; }
+        #navbar .navbar-nav > li .navbarLink span {
+          color: #324545;
+          padding: 28px 18px;
+          display: block;
+          font-weight: 600;
+          font-size: 12px; }
+          #navbar .navbar-nav > li .navbarLink span:hover, #navbar .navbar-nav > li .navbarLink span.active {
+            color: #1ccdca;
+            transition: all 0.5s ease-in; }
       #navbar .navbar-nav > li .drop {
         color: #324545;
         padding: 28px 18px;
         display: block;
-        font-weight: 600; }
+        font-weight: 600;
+        text-decoration: none; }
+
+.hoverDropdown:hover .pagesMenu {
+  display: block; }
+
+.pagesMenu {
+  background-color: #13181A; }
+  .pagesMenu li {
+    width: 195px; }
+  .pagesMenu .pagesMenuDropdown {
+    color: #cccccc;
+    text-transform: uppercase;
+    border-bottom: 0.3px solid #1B2228;
+    padding: 9px 10px;
+    font-size: 12px; }
+    .pagesMenu .pagesMenuDropdown:hover {
+      background-image: linear-gradient(to bottom, black 0, black 100%);
+      color: #ccc; }
 
 .navbarLink:hover {
   text-decoration: none; }
@@ -473,6 +493,18 @@ body {
   background-color: #f9fafc;
   border-bottom: 1px solid #eaebed;
   border-top: 1px solid #eaebed; }
+  #chooseUs .chooseUsContainer {
+    padding: 90px 15px; }
+  #chooseUs .maintitleUpper {
+    display: inline-block;
+    margin-bottom: 35px;
+    font-size: 22px;
+    color: #324545;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    font-family: "Oswald", "Open Sans", sans-serif;
+    line-height: 40px; }
   #chooseUs .rocket {
     background-image: url("img/test_images/porto5.jpg");
     height: 270px;
@@ -489,22 +521,34 @@ body {
     background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
     padding: 0;
     border: none; }
-  #chooseUs .widhoutBorder a {
+  #chooseUs .widhoutBorder .topText {
     border-right: 1px solid #cccccc;
     border-left: none;
     border-radius: 0 0 0 0;
-    border-top: 1px solid #cccccc;
+    box-shadow: 0 -0.5px 0 0 #ccc;
     color: #888;
     line-height: 50px;
     width: auto;
     text-align: left;
     font-size: 14px;
-    padding: 0 25px; }
-    #chooseUs .widhoutBorder a:hover {
+    padding: 0 25px;
+    margin-top: 3px;
+    transition: all 0.6s ease-in; }
+    #chooseUs .widhoutBorder .topText:hover {
       background-color: white;
       color: #324545; }
-    #chooseUs .widhoutBorder a:active {
-      color: #1ccdca; }
+    #chooseUs .widhoutBorder .topText:focus, #chooseUs .widhoutBorder .topText.active {
+      color: #1ccdca;
+      box-shadow: transparent; }
+      #chooseUs .widhoutBorder .topText:focus:before, #chooseUs .widhoutBorder .topText.active:before {
+        content: "";
+        background: #1ccdca;
+        display: block;
+        height: 3px;
+        left: -1px;
+        position: absolute;
+        top: -1px;
+        width: 102%; }
   #chooseUs .content p {
     font-family: "Open Sans", sans-serif;
     color: #666666;
@@ -527,6 +571,59 @@ body {
       margin-right: 10px; }
   #chooseUs ul {
     padding-left: 0; }
+
+/*******************************
+* Does not work properly if "in" is added after "collapse".
+* Get free snippets on bootpen.com
+*******************************/
+.myIcon {
+  color: #ccc;
+  font-size: 20px;
+  margin-right: 8px; }
+  .myIcon:focus {
+    color: white; }
+
+.panel-group .panel {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #e5e5e5; }
+
+.panel-default > .panel-heading {
+  padding: 0;
+  border-radius: 0;
+  color: #666666;
+  background-color: white;
+  border-color: #EEEEEE; }
+
+.panel-title {
+  font-size: 14px; }
+
+.panel-title > a {
+  display: block;
+  padding: 12px 25px 11px 25px;
+  text-decoration: none; }
+
+.more-less {
+  float: right;
+  color: #cecece; }
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #EEEEEE; }
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+  background-color: white; }
+
+.demo {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.topTitle {
+  background-color: white;
+  transition: background-color 0.8s linear; }
+  .topTitle:focus {
+    background-color: #1ccdca;
+    color: white; }
 
 #runningNumbers i {
   text-align: center;
