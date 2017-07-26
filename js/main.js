@@ -154,6 +154,7 @@ sr.reveal('.progress', {beforeReveal: startProgress, duration: 1000});
 //     setTimeout(carousel, 5000);
 // }
 
+// window.sr = ScrollReveal({reset: true});
 
 sr.reveal('.slideLink', {origin: 'right', duration: 900, distance: '500px'});
 sr.reveal('.slideHeading', {origin: 'right', duration: 1500, distance: '500px'});
