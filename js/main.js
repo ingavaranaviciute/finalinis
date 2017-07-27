@@ -190,3 +190,23 @@ function myMap() {
   var marker = new google.maps.Marker({position:myCenter});
   marker.setMap(map);
 }
+
+function bootstrap_equalizer() {
+    $(".equalizer").each(function() {
+        var heights = $(this).find(".watch").map(function() {
+                return $(this).height();
+            }).get(),
+
+            maxHeight = Math.max.apply(null, heights);
+
+        $(".watch").height(maxHeight);
+    });
+}
+
+$(document).ready(function() {
+    bootstrap_equalizer();
+});
+
+$(window).resize(function () {
+    bootstrap_equalizer();
+});
