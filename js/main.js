@@ -191,22 +191,22 @@ function myMap() {
   marker.setMap(map);
 }
 
-function bootstrap_equalizer() {
-    $(".equalizer").each(function() {
-        var heights = $(this).find(".watch").map(function() {
-                return $(this).height();
-            }).get(),
-
-            maxHeight = Math.max.apply(null, heights);
-
-        $(".watch").height(maxHeight);
-    });
-}
-
-$(document).ready(function() {
-    bootstrap_equalizer();
-});
-
-$(window).resize(function () {
-    bootstrap_equalizer();
-});
+// function bootstrap_equalizer() {
+//     $(".equalizer").each(function() {
+//         var heights = $(this).find(".watch").map(function() {
+//                 return $(this).height();
+//             }).get(),
+//
+//             maxHeight = Math.max.apply(null, heights);
+//
+//         $(".watch").height(maxHeight);
+//     });
+// }
+//
+// $(document).ready(function() {
+//     bootstrap_equalizer();
+// });
+//
+// $(window).resize(function () {
+//     bootstrap_equalizer();
+// });

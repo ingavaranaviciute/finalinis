@@ -187,14 +187,14 @@ body {
   /* Firefox 18- */
   color: #757575; }
 
-#cartIcon {
+#cartIcon, .burger, .loupe {
   padding: 11px;
   border-radius: 100px;
   border: 1px solid #ccc;
   display: inline-block;
   position: relative;
   cursor: pointer; }
-  #cartIcon .number {
+  #cartIcon .number, .burger .number, .loupe .number {
     border: 1px solid #ccc;
     border-radius: 42px;
     position: absolute;
@@ -207,12 +207,12 @@ body {
     font-size: 10px;
     color: #818b8d;
     background-color: white; }
-  #cartIcon:hover #cart {
+  #cartIcon:hover #cart, .burger:hover #cart, .loupe:hover #cart {
     color: #1ccdca; }
 
-#cart {
+#cart, .burger, .loupe {
   color: #818b8d;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   vertical-align: middle; }
 
@@ -425,20 +425,27 @@ body {
   #content .piece:hover i {
     background-color: #1ccdcb;
     color: white; }
+  @media (max-width: 991px) {
+    #content .piece {
+      margin-bottom: 60px; }
+      #content .piece:last-child {
+        margin-bottom: 0; } }
 
 .contentText {
   padding-left: 105px;
   position: relative; }
 
 #skills {
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex; }
   #skills .watch {
     margin: 0;
     padding: 0; }
   #skills .runnbar {
+    flex: 1;
     background-color: #3C464D;
-    float: left;
-    padding: 0 50px; }
+    padding: 90px 50px;
+    margin: 0; }
     #skills .runnbar h2 {
       text-transform: uppercase;
       color: white;
@@ -453,7 +460,11 @@ body {
     background-image: url("img/test_images/bg_header4.jpg");
     height: 100%;
     width: 100%;
-    background-size: cover; }
+    background-size: cover;
+    flex: 1; }
+
+.leafContainer {
+  padding: 0; }
 
 .progress_bar {
   margin-bottom: 25px; }
@@ -801,6 +812,39 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 60px; }
+    #services h2 .line {
+      border-top: 1px solid #ccc;
+      width: 33%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      position: relative; }
+      #services h2 .line:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100px;
+        background: #1cc6df;
+        height: 1px;
+        top: -1px;
+        transition: all 0.4s linear;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%); }
+      #services h2 .line .dot {
+        background: #fff;
+        border: 1px solid #1cc6df;
+        height: 10px;
+        position: absolute;
+        width: 10px;
+        border-radius: 20px;
+        transform: translate(-50%, -50%); }
+    #services h2:hover .line:before {
+      width: 75%; }
   #services .picture {
     background-image: url("img/test_images/looking1.jpg");
     height: 540px;
@@ -849,6 +893,7 @@ body {
 .priceList .plan_price_in {
   position: absolute;
   z-index: 1;
+  left: 50%;
   cursor: pointer;
   transform: translate(-50%, -50%); }
   .priceList .plan_price_in span {

@@ -1,3 +1,9 @@
+$sm-min: 768px;
+$sm-max: 991px;
+$md-min: 992px;
+$md-max: 1199px;
+$lg-min: 1200px;
+
 html, body, .topbar {
   width: 100%;
   padding: 0;
@@ -278,7 +284,7 @@ $placeholderColor: #757575;
   }
 }
 
-#cartIcon {
+#cartIcon, .burger, .loupe {
   padding: 11px;
   border-radius: 100px;
   border: 1px solid #ccc;
@@ -303,13 +309,12 @@ $placeholderColor: #757575;
     #cart {
       color: #1ccdca;
     }
-
   }
 }
 
-#cart {
+#cart, .burger, .loupe {
   color: #818b8d;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   vertical-align: middle;
 }
@@ -606,6 +611,12 @@ $placeholderColor: #757575;
         color: white;
       }
     }
+    @media (max-width: $sm-max) {
+      margin-bottom: 60px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -618,8 +629,8 @@ $placeholderColor: #757575;
 
 #skills {
   overflow: hidden;
-
-  .watch{
+  display: flex;
+  .watch {
     margin: 0;
     padding: 0;
   }
@@ -627,16 +638,11 @@ $placeholderColor: #757575;
     //width: 70%;
   }
   .runnbar {
-
+    flex: 1;
     background-color: #3C464D;
-    float: left;
-    //position: absolute;
-    //width: 50%;
-    padding: 0 50px;
-    //.innerDiv{
-    //  width: 100%;
-    //
-    //}
+    padding: 90px 50px;
+    margin: 0;
+
     h2 {
       text-transform: uppercase;
       color: white;
@@ -656,11 +662,14 @@ $placeholderColor: #757575;
     background-image: url("img/test_images/bg_header4.jpg");
     height: 100%;
     width: 100%;
-    //float: right;
     background-size: cover;
+    flex: 1;
+
   }
 }
-
+.leafContainer {
+  padding:0;
+}
 .progress_bar {
   margin-bottom: 25px;
   .fill_con {
@@ -765,6 +774,47 @@ $placeholderColor: #757575;
     line-height: 40px;
     box-shadow: none;
     border: none;
+    //.line {
+    //  border-top: 1px solid #ccc;
+    //  width: 33%;
+    //  display: block;
+    //  margin-left: auto;
+    //  margin-right: auto;
+    //  margin-top: 20px;
+    //  position: relative;
+    //
+    //  &:before {
+    //    content: "";
+    //    display: block;
+    //    position: absolute;
+    //    width: 100px;
+    //    background: #1cc6df;
+    //    height: 1px;
+    //    top: -1px;
+    //    transition: all 0.4s linear;
+    //    left: 50%;
+    //    -webkit-transform: translateX(-50%);
+    //    -moz-transform: translateX(-50%);
+    //    -ms-transform: translateX(-50%);
+    //    -o-transform: translateX(-50%);
+    //    transform: translateX(-50%);
+    //  }
+    //  .dot {
+    //    background: #fff;
+    //    border: 1px solid #1cc6df;
+    //    height: 10px;
+    //    position: absolute;
+    //    width: 10px;
+    //    border-radius: 20px;
+    //    transform: translate(-50%, -50%);
+    //  }
+    //}
+    //&:hover {
+    //  .line:before {
+    //    width: 25%;
+    //  }
+    //}
+
   }
 
   .rocket {
@@ -1121,6 +1171,47 @@ body {
     text-transform: uppercase;
     margin-bottom: 60px;
 
+    .line {
+      border-top: 1px solid #ccc;
+      width: 33%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100px;
+        background: #1cc6df;
+        height: 1px;
+        top: -1px;
+        transition: all 0.4s linear;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+      .dot {
+        background: #fff;
+        border: 1px solid #1cc6df;
+        height: 10px;
+        position: absolute;
+        width: 10px;
+        border-radius: 20px;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &:hover {
+      .line:before {
+        width: 75%;
+      }
+    }
+
   }
   .picture {
     background-image: url("img/test_images/looking1.jpg");
@@ -1193,7 +1284,7 @@ body {
     position: absolute;
     z-index: 1;
     //top: 50%;
-
+    left: 50%;
     cursor: pointer;
     transform: translate(-50%, -50%);
 
@@ -1315,11 +1406,11 @@ body {
         top: -1px;
         transition: all 0.4s linear;
         left: 50%;
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            -o-transform: translateX(-50%);
-            transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
       }
       .dot {
         background: #fff;
@@ -1390,11 +1481,6 @@ body {
     //    transform: translateX(-50%);
     //  }
     //}
-
-
-
-
-
 
   }
   form {
