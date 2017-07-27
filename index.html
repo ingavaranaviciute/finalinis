@@ -37,9 +37,10 @@
 
 <!--</div>-->
 
-<header class="pageTopHeader">
+<header class="pageTopHeader ">
 
-    <div class="topbar hidden-md hidden-sm">
+
+    <div class="topbar">
         <div class="row">
             <div class="col-md-12">
                 <div class="topDetails pull-left">
@@ -92,6 +93,64 @@
         </div>
     </div>
 
+    <button class="toggleBtn hidden-md hidden-lg">
+        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+
+    <!--<div class="topbar hidden-xs hidden-sm">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12">-->
+                <!--<div class="topDetails pull-left">-->
+                    <!--<span class="topDetailsInfo">-->
+                        <!--<i class="fa fa-globe" aria-hidden="true"></i>-->
+                        <!--<span class="cursor">ENGLISH</span>-->
+
+                        <!--<span class="menu-wrapper">-->
+                            <!--<span class="menu">-->
+                            <!--English-->
+                                <!--<i class="fa fa-check" aria-hidden="true"></i>-->
+                            <!--</span>-->
+                            <!--<span class="menuRtl">-->
+                            <!--RTL-->
+                            <!--</span>-->
+                        <!--</span>-->
+                    <!--</span>-->
+                    <!--<span class="topDetailsInfo">-->
+                        <!--<i class="fa fa-key" aria-hidden="true"></i>-->
+                        <!--<span class="cursor">LOG IN</span>-->
+                    <!--</span>-->
+                    <!--<span class="topDetailsInfo">-->
+                        <!--<i class="fa fa-phone" aria-hidden="true"></i>-->
+                         <!--<span>CALL US: (123)456-7890</span>-->
+                    <!--</span>-->
+                    <!--<span class="topDetailsInfo">-->
+                        <!--<i class="fa fa-comment-o" aria-hidden="true"></i>-->
+                        <!--<span>CALL US: (123)456-7890</span>-->
+                    <!--</span>-->
+                <!--</div>-->
+
+                <!--<div class="topSocial pull-right">-->
+                    <!--<a href="#" class="topLink" target="_blank">-->
+                        <!--<i class="fa fa-facebook" aria-hidden="true"></i>-->
+                    <!--</a>-->
+                    <!--<a href="#" class="topLink" target="_blank">-->
+                        <!--<i class="fa fa-twitter" aria-hidden="true"></i>-->
+                    <!--</a>-->
+                    <!--<a href="#" class="topLink" target="_blank">-->
+                        <!--<i class="fa fa-google-plus-official" aria-hidden="true"></i>-->
+                    <!--</a>-->
+                    <!--<a href="#" class="topLink" target="_blank">-->
+                        <!--<i class="fa fa-skype" aria-hidden="true"></i>-->
+                    <!--</a>-->
+                    <!--<a href="#" class="topLink" target="_blank">-->
+                        <!--<i class="fa fa-vimeo" aria-hidden="true"></i>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
 </header>
 
 <!---END HEADER--->
@@ -101,7 +160,7 @@
             <div class="logo">
                 <img class="darkLogo" src="img/logo-dark.png">
             </div>
-            <ul class="navbar-nav clearfix hidden-md hidden-sm">
+            <ul class="navbar-nav clearfix hidden-sm hidden-xs">
                 <li>
                     <a href="#" class="navbarLink">
                         <span class="active">HOME</span>
@@ -165,7 +224,7 @@
                     <input type="text" placeholder="Search Here..." class="form-control" id="search">
                     <i class="fa fa-search searchIkon" aria-hidden="true"></i>
                 </form>
-                <i class="burger fa fa-bars hidden-lg" aria-hidden="true"></i>
+                <i class="burger fa fa-bars hidden-md hidden-lg" aria-hidden="true"></i>
                 <i class="loupe fa fa-search hidden-lg" aria-hidden="true"></i>
                 <span id="cartIcon">
             <i class="fa fa-shopping-cart" aria-hidden="true" id="cart"></i>
@@ -221,68 +280,67 @@
 
     <!--CONTENT-->
 
-
-    <section id="content">
-
-        <div class="row">
-            <div class="coding piece col-md-4 col-sm-6">
-                <i class="fa fa-television" aria-hidden="true"></i>
-                <div class="contentText">
-                    <h3>
-                        <a href="#">Super Coding</a>
-                    </h3>
-                    <span class="desc">There are many variations of demo text passed sages of Lorem Ipsum available the
+    <div class="container row spacer">
+        <section id="content">
+            <div class="row">
+                <div class="coding piece col-lg-6 col-md-4">
+                    <i class="fa fa-television" aria-hidden="true"></i>
+                    <div class="contentText">
+                        <h3>
+                            <a href="#">Super Coding</a>
+                        </h3>
+                        <span class="desc">There are many variations of demo text passed sages of Lorem Ipsum available the
                     majority There are many variations of demo.
                 </span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="interface piece col-md-4 col-sm-6">
-                <i class="fa fa-tablet" aria-hidden="true"></i>
-                <div class="contentText">
-                    <h3>
-                        <a href="#">Best User Interface</a>
-                    </h3>
-                    <span class="desc">There are many variations of demo text passed sages of Lorem Ipsum available
+                <div class="interface piece col-lg-6 col-md-4">
+                    <i class="fa fa-tablet" aria-hidden="true"></i>
+                    <div class="contentText">
+                        <h3>
+                            <a href="#">Best User Interface</a>
+                        </h3>
+                        <span class="desc">There are many variations of demo text passed sages of Lorem Ipsum available
                     the majority There are many variations of demo.
                 </span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="design piece last col-md-4 col-sm-6">
-                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
-                <div class="contentText">
-                    <h3>
-                        <a href="#">Unique Design</a>
-                    </h3>
-                    <span class="desc">There are many variations of demo text passed sages of Lorem Ipsum available the
+                <div class="design piece last col-lg-6 col-md-4">
+                    <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                    <div class="contentText">
+                        <h3>
+                            <a href="#">Unique Design</a>
+                        </h3>
+                        <span class="desc">There are many variations of demo text passed sages of Lorem Ipsum available the
                     majority There are many variations of demo.</span>
+                    </div>
                 </div>
             </div>
-
-        </div>
-    </section>
+        </section>
+    </div>
     <!--CONTENT ENDS-->
 
     <!--SKILLS-->
     <div id="skills" class="row">
 
-        <div class="runnbar col-md-6">
-            <!--<div class="innerDiv">-->
-            <h2>Our Skills</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typeseting industry Lorem in text Ipsum has been
-                the
-                industry standar dummyy text ever since the when an iunesi known printer of took a galley of
-                type.</p>
+        <div class="runnbar">
+            <div class="innerDiv">
+                <h2>Our Skills</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typeseting industry Lorem in text Ipsum has been
+                    the
+                    industry standar dummyy text ever since the when an iunesi known printer of took a galley of
+                    type.</p>
 
 
-            <div class="row innerRow">
-                <!-- Skill Bars -->
-                <div class="progressBar">
-                    <div class="progress skill-bar darkFill">
-                        <div class="progress-bar progress-bar-default web" role="progressbar" aria-valuenow="80"
-                             aria-valuemin="0"
-                             aria-valuemax="100">
+                <div class=" innerRow">
+                    <!-- Skill Bars -->
+                    <div class="progressBar">
+                        <div class="progress skill-bar darkFill">
+                            <div class="progress-bar progress-bar-default web" role="progressbar" aria-valuenow="80"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100">
                                 <span class="skill">Web design
 
                                         <i class="val">
@@ -290,67 +348,67 @@
                                         </i>
 
                                 </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress skill-bar darkFill">
-                        <div class="progress-bar progress-bar-default programming" role="progressbar"
-                             aria-valuenow="60"
-                             aria-valuemin="0"
-                             aria-valuemax="100">
+                        <div class="progress skill-bar darkFill">
+                            <div class="progress-bar progress-bar-default programming" role="progressbar"
+                                 aria-valuenow="60"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100">
                                 <span class="skill">Programming
                                     <i class="val">
                                     <span class="animVal">60</span>%
                                     </i>
                                 </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress skill-bar darkFill">
-                        <div class="progress-bar progress-bar-default html"
-                             role="progressbar" aria-valuenow="70"
-                             aria-valuemin="0"
-                             aria-valuemax="100">
+                        <div class="progress skill-bar darkFill">
+                            <div class="progress-bar progress-bar-default html"
+                                 role="progressbar" aria-valuenow="70"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100">
                                 <span class="skill">Html/scc
                                     <i class="val">
                                         <span class="animVal">70</span>%
                                     </i>
                                 </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress skill-bar darkFill">
-                        <div class="progress-bar progress-bar-default Wordpress"
-                             role="progressbar"
-                             aria-valuenow="100"
-                             aria-valuemin="0"
-                             aria-valuemax="100">
+                        <div class="progress skill-bar darkFill">
+                            <div class="progress-bar progress-bar-default Wordpress"
+                                 role="progressbar"
+                                 aria-valuenow="100"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100">
                                 <span class="skill">Wordpress
                                     <i class="val">
                                         <span class="animVal">100</span>%
                                     </i>
                                 </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="last progress skill-bar darkFill">
-                        <div class="progress-bar progress-bar-default Joomla"
-                             role="progressbar" aria-valuenow="40"
-                             aria-valuemin="0"
-                             aria-valuemax="100">
+                        <div class="last progress skill-bar darkFill">
+                            <div class="progress-bar progress-bar-default Joomla"
+                                 role="progressbar" aria-valuenow="40"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100">
                                 <span class="skill">Joomla
                                     <i class="last val">
                                         <span class="animVal">40</span>%
                                     </i>
                                 </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--</div>-->
 
         </div>
-        <div class="leafContainer col-md-6 hidden-xs">
+        <div class="leafContainer hidden-sm hidden-xs">
             <div class="leaf">
 
             </div>
@@ -669,28 +727,28 @@
     <div id="runningNumbers">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="innerNumb clients">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span class="clientsNumber animated">1500</span>
                         <span>Clieents</span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="innerNumb awards">
                         <i class="fa fa-heart-o" aria-hidden="true"></i>
                         <span class="awardsNumber animated">13</span>
                         <span>Awards</span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="innerNumb lines">
                         <i class="fa fa-code" aria-hidden="true"></i>
                         <span class="lineNumber animated">94771</span>
                         <span>Line of code</span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="innerNumb projects">
                         <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                         <span class="projectsNumber animated">387</span>
@@ -846,7 +904,7 @@
                     <span>There are many variations of demo text passed sages of Lorem Ipsum available the majority.</span>
                 </div>
                 <div class="serviceBox">
-                    <i class="fa fa-television" aria-hidden="true"></i>
+                    <i class="fa fa-flask" aria-hidden="true"></i>
                     <h3>Powerful Performance</h3>
                     <span>There are many variations of demo text passed sages of Lorem Ipsum available the majority.</span>
                 </div>
@@ -869,7 +927,7 @@
 
         <div class="row">
 
-            <div class="priceList col-md-4 col-lg-4">
+            <div class="priceList first col-sm-6 col-lg-4">
                 <div class="plan_price_in">
                     <img src="hexagon.svg">
                     <span class="priceM">573</span>
@@ -911,7 +969,7 @@
                 </ul>
             </div>
 
-            <div class="priceList col-md-4 col-lg-4">
+            <div class="priceList another col-sm-6 col-lg-4">
                 <div class="plan_price_in">
                     <img src="hexagon.svg">
                     <span class="priceM">234</span>
@@ -952,7 +1010,7 @@
                 </ul>
             </div>
 
-            <div class="priceList col-md-4 col-lg-4">
+            <div class="priceList last col-sm-6 col-lg-4">
                 <div class="plan_price_in">
                     <img src="hexagon.svg">
                     <span class="price">1234</span>
@@ -1091,7 +1149,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-sm-6">
                     <div class="footer_row first">
                         <h6 class="footer_title">Company Info</h6>
                         <img alt="Enar" src="img/test_images/logo-light.png">
@@ -1108,7 +1166,7 @@
                         <span class="footer_desc">
 							By subscribing to our mailing list you will always be update with the latest news :
 						</span>
-                        <form id="newsletter_form" class="newsletter_form" action="php/mailchimp/subscribe.php"
+                        <form id="newsletter_form" class="newsletter_form">
                               method="post" novalidate="novalidate">
                             <div class="newsletter_con">
                                 <input class="subscribe-mail" name="subscribe-mail" id="subscribe-mail" type="email"
@@ -1122,7 +1180,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-sm-6">
                     <div class="footer_row">
                         <h6 class="footer_title">Recent Posts</h6>
                         <ul class="recent_posts_list">
@@ -1174,7 +1232,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6">
                     <div class="footer_row first">
                         <h6 class="footer_title">Cloud Tags</h6>
                         <div class="tagcloud clearfix">
@@ -1232,7 +1290,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6">
                     <div class="footer_row first">
                         <h6 class="footer_title">Best Author</h6>
                         <div class="about_author clearfix">
@@ -1258,10 +1316,11 @@
                     </div>
 
                     <div class="footer_row">
-                        <h6 class="footer_title">Custom Video</h6>
+                        <h6 class="footer_title last">Custom Video</h6>
                         <a class="hm_vid_con popup-vimeo" href="https://vimeo.com/29193046" data-external="true">
-                            <span class="vid_icon"><i class="fa fa-play play" aria-hidden="true"></i></span>
-                            <img alt="Video Title" src="img/test_images/blog5.jpg" class="videoTitle">
+                            <div class="imgDiv">
+                                <i class="fa fa-play play" aria-hidden="true"></i>
+                            </div>
                         </a>
                     </div>
                 </div>

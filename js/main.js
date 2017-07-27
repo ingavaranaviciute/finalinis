@@ -210,3 +210,9 @@ function myMap() {
 // $(window).resize(function () {
 //     bootstrap_equalizer();
 // });
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".topbar").slideToggle();
+  });
+});
