@@ -35,13 +35,11 @@ body {
   border-bottom: 1px solid #ccc;
   border-left: none;
   border-right: none;
-  //i {
-  //  transition: transform 0.4s ease;
-  //  &.up {
-  //    transform: rotate(180deg);
-  //  }
-  //
-  //}
+  &.btnReverse {
+    i {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .topbar {
@@ -66,7 +64,7 @@ body {
 
   .topDetails {
     margin-top: 4px;
-
+    display: inline-block;
     .topDetailsInfo {
       //padding: 12px 0 12px 0;
       margin-right: 40px;
@@ -164,11 +162,16 @@ body {
   @media(max-width: 767px) {
     padding: 10px 15px;
   }
+  @media(min-width: $md-min) {
+    display: block;
+  }
 }
 
 .topSocial {
+  float: right;
   @media (max-width: 991px) {
     text-align: center;
+    float: none;
   }
 }
 

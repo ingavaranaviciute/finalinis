@@ -211,23 +211,31 @@ function myMap() {
 //     bootstrap_equalizer();
 // });
 
-$(document).ready(function(){
-  $("button").click(function(){
-    $(".topbar").slideToggle();
-  });
-});
+
 
 // $(".topbar").toggleClass("on")
 //
 
+$(".toggleBtn").on('click', function() {
+    $(".topbar").slideToggle();
+    $(this).toggleClass("btnReverse")
+
+  // if ($(this).hasClass("btnReverse")){
+  //     $(this).removeClass("btnReverse");
+  // } else {
+  //     $(this).addClass("btnReverse");
+  // }
+});
+
+
 
 if ($(".topbar").hasClass("on")){
   $(".topbar").removeClass("on")
-  $( ".down" ).show();
+
 }
   else {
       $(".topbar").addClass("on")
-      $( ".up" ).show();
+
 }
 
 
