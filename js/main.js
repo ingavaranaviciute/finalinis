@@ -216,3 +216,40 @@ $(document).ready(function(){
     $(".topbar").slideToggle();
   });
 });
+
+// $(".topbar").toggleClass("on")
+//
+
+
+if ($(".topbar").hasClass("on")){
+  $(".topbar").removeClass("on")
+  $( ".down" ).show();
+}
+  else {
+      $(".topbar").addClass("on")
+      $( ".up" ).show();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
